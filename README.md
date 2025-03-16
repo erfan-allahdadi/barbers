@@ -3,7 +3,7 @@
 | Feature                        | Implementation Status | Notes |
 |--------------------------------|-----------------------|-------|
 | **Filter based on name**        | ✔️ Implemented        |  |
-| **Filter based on Tab**              | ✔️ Implemented        | Apparently the given API is not responsive to this feature and if it were to be client-side handled, we would no longer have the advantage of server-side. |
+| **Filter based on Tab**              | ❌ Not Implemented (just UI)        | Apparently the given API is not responsive to this feature and if it were to be client-side handled, we would no longer have the advantage of server-side. |
 | **Filter based on services**     |  ✔️ Implemented    |  |
 | **App router - Typescript**      | ✔️ Implemented        |  |
 | **Use query params in URL**              | ✔️ Implemented        |  |
