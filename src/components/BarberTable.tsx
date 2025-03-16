@@ -1,6 +1,5 @@
-import { LIST_FIELDS } from "@/config/system.config";
 import { Barber } from "@/types/barbers";
-import React from "react";
+import { LIST_FIELDS } from "@/config/system.config";
 
 function BarberTable({ results }: { results: Barber[] }) {
   return (

@@ -13,6 +13,7 @@ export interface Barber {
   rate: number;
   review_count: number;
   slug: string;
+  services: string[];
 }
 
 export interface Barbers {

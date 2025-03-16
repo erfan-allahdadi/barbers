@@ -1,7 +1,8 @@
-import { getBarbers, getServices } from "@/services";
-import BarberList from "@/components/BarberList";
 import { Suspense } from "react";
+import { getBarbers, getServices } from "@/services";
+
 import Loading from "../loading";
+import BarberList from "@/components/BarberList";
 
 async function Page({
   searchParams,

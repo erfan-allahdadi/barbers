@@ -6,6 +6,7 @@ export const SYSTEM_FEATURES = Object.freeze({
   ADDRESS: "ADDRESS",
   RATE: "RATE",
   REVIEWS_COUNT: "REVIEWS_COUNT",
+  SERVICES: "SERVICES",
 });
 
 export const STATUSES = Object.freeze({
@@ -55,6 +56,12 @@ export const LIST_FIELDS = Object.freeze({
     name: SYSTEM_FEATURES.REVIEWS_COUNT,
     title: "تعداد بازدید",
     order: 50,
+    component: SmartBarberField,
+  },
+  SERVICES: {
+    name: SYSTEM_FEATURES.SERVICES,
+    title: "خدمات",
+    order: 60,
     component: SmartBarberField,
   },
 });

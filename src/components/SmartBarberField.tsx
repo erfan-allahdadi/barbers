@@ -10,6 +10,7 @@ interface SmartBarberFieldProps {
 const SmartBarberField: React.FC<SmartBarberFieldProps> = ({ item, field }) => {
   const fieldName = field.name.toLowerCase();
 
+  // each case can be a component
   const fieldValue = () => {
     switch (fieldName) {
       case "avatar":
@@ -29,6 +30,20 @@ const SmartBarberField: React.FC<SmartBarberFieldProps> = ({ item, field }) => {
           <div className="flex items-center gap-1">
             <span className="text-yellow-500">⭐</span>
             {item.rate}
+          </div>
+        );
+
+      case "services":
+        return (
+          <div className="flex gap-2 flex-wrap">
+            {item.services.map((service, index) => (
+              <span
+                key={index}
+                className="px-3 py-1 text-sm bg-gray-200 rounded-full"
+              >
+                {service}
+              </span>
+            ))}
           </div>
         );
 

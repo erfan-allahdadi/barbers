@@ -1,9 +1,12 @@
+import BaseTab from "./BaseTab";
 import SearchBar from "./SearchBar";
 import BarberTable from "./BarberTable";
+
 import { Barbers } from "@/types/barbers";
 import { ServiceResponse } from "@/types/services";
+
 import ServiceFilter from "./ServiceFilter";
-import BaseTab from "./BaseTab";
+
 import { STATUSES } from "@/config/system.config";
 
 interface BarberListProps {
