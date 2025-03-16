@@ -9,6 +9,7 @@ interface SearchBarProps {
 
 const SearchBar = ({ search }: SearchBarProps) => {
   const [searchTerm, setSearchTerm] = useState(search);
+
   const router = useRouter();
 
   const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -23,12 +24,12 @@ const SearchBar = ({ search }: SearchBarProps) => {
   };
 
   return (
-    <div className="mb-4">
+    <div className="mb-8 w-full">
       <input
         type="text"
         value={searchTerm}
         onChange={handleSearchChange}
-        className="p-2 border rounded"
+        className="p-2 border border-gray-300 rounded w-full"
         placeholder="جستجو کنید ..."
       />
     </div>
