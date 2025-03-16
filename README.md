@@ -3,11 +3,11 @@
 | Feature                        | Implementation Status | Notes |
 |--------------------------------|-----------------------|-------|
 | **Filter based on name**        | ✔️ Implemented        |  |
-| **Filter based on Tab**              | ❌ Not Implemented (just UI)        | ظاهرا ای پی آی داده شده از این ویژگی پشتیبانی نمیکنه و اگر میخواستم کلاینتی هندل کنم مزیت سرور ساید بودن لیست و سئو رو از دست میدادم، از همین جهت فعلا یک مقدار رو در یو آر ال ارسال میکنه و به سرور درخواستی زده نمیشه اما سایر فیلتر ها (جستجو و فیلتر بر اساس سرویس کار) کار میکنند
+| **Filter based on Tab**              | ❌ Not Implemented (just UI)        | ظاهرا ای پی آی داده شده از این ویژگی پشتیبانی نمیکنه و اگر میخواستم کلاینتی هندل کنم مزیت سرور ساید بودن لیست و سئو رو از دست میدادم، از همین جهت فعلا یک مقدار رو در یو آر ال ارسال میکنه و به سرور درخواستی زده نمیشه اما سایر فیلتر ها (جستجو و فیلتر بر اساس سرویس ) کار میکنند
 | **Filter based on services**     |  ✔️ Implemented    |  |
 | **App router - Typescript**      | ✔️ Implemented        |  |
 | **Use query params in URL**              | ✔️ Implemented        |  |
-| **Axios and AbortController**           | ❌ Not Implemented    | The Next document recommends using fetch to achieve things like caching - automatic optimization of requests on the server and client - better compatibility with different environments - support for streams in Next.js: - reducing the size of the project |
+| **Axios and AbortController**           | ❌ Not Implemented    | داکیومنت نکست توصیه کرده از فچ استفاده کنیم تا از مواردی مثل کشینگ - بهینه‌سازی خودکار درخواست‌ها در سرور و کلاینت - سازگاری بهتر با محیط‌های مختلف- پشتیبانی از استریم - کاهش حجم پروژه بهره مند بشیم |
 | **Suspense and Loading**             | ✔️ Implemented        |  |
 | **Responsive design**              | ✔️ Implemented        |  |
 | **Tailwind CSS**                   | ✔️ Implemented        |  |
