@@ -1,6 +1,6 @@
 "use client";
-import Link from "next/link";
-import { useSearchParams } from "next/navigation";
+
+import { useRouter, useSearchParams, usePathname } from "next/navigation";
 
 interface Tab {
   text: string;
@@ -13,25 +13,34 @@ interface BaseTabProps {
 }
 
 function BaseTab({ tabs }: BaseTabProps) {
+  const router = useRouter();
   const searchParams = useSearchParams();
+  const pathname = usePathname();
+
   const currentStatus = searchParams.get("is_shop") || "all";
 
+  const handleTabClick = (value: string) => {
+    const params = new URLSearchParams(searchParams.toString());
+    params.set("is_shop", value);
+
+    router.push(`${pathname}?${params.toString()}`, { scroll: false });
+  };
+
   return (
-    <div className="flex gap-2 mt-6 mb-4">
+    <div className="flex gap-2 my-8">
       {tabs.map(({ text, value, color }) => {
         const isActive = currentStatus === value;
 
         return (
-          <Link
+          <button
             key={value}
-            href={{ pathname: "/barbers", query: { is_shop: value } }}
-            scroll={false}
-            className={`px-4 py-2 rounded-lg cursor-pointer ${
+            onClick={() => handleTabClick(value)}
+            className={`px-4 py-2 rounded-lg cursor-pointer transition ${
               isActive ? `${color} text-white` : "bg-gray-200"
             }`}
           >
             {text}
-          </Link>
+          </button>
         );
       })}
     </div>

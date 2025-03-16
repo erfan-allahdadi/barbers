@@ -4,7 +4,7 @@ import React from "react";
 
 function BarberTable({ results }: { results: Barber[] }) {
   return (
-    <table className="min-w-full bg-white shadow-md rounded-lg overflow-hidden border border-gray-200">
+    <table className="min-w-full bg-white shadow-md rounded-lg overflow-hidden border border-gray-200 my-4">
       <thead className="bg-blue-500 text-white">
         <tr>
           {Object.values(LIST_FIELDS).map((field) => (

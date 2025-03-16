@@ -3,6 +3,8 @@ import BarberTable from "./BarberTable";
 import { Barbers } from "@/types/barbers";
 import { ServiceResponse } from "@/types/services";
 import ServiceFilter from "./ServiceFilter";
+import BaseTab from "./BaseTab";
+import { STATUSES } from "@/config/system.config";
 
 interface BarberListProps {
   searchParams: { search?: string; is_shop?: string; services?: string };
@@ -19,6 +21,10 @@ async function BarberList({
 
   return (
     <div className="container mx-auto p-6">
+      <div>
+        <h1 className="text-2xl font-bold mb-4">لیست آرایشگاه‌ها</h1>
+        <BaseTab tabs={Object.values(STATUSES)} />
+      </div>
       <div className="w-full">
         <SearchBar search={search} />
       </div>

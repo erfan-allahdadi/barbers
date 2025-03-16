@@ -1,5 +1,7 @@
 import { getBarbers, getServices } from "@/services";
 import BarberList from "@/components/BarberList";
+import { Suspense } from "react";
+import Loading from "../loading";
 
 async function Page({
   searchParams,
@@ -14,12 +16,13 @@ async function Page({
 
   return (
     <main className="container mx-auto p-4">
-      <h1 className="text-2xl font-bold mb-4">لیست آرایشگاه‌ها</h1>
-      <BarberList
-        searchParams={searchParams}
-        barbers={barbers}
-        services={services}
-      />
+      <Suspense fallback={<Loading />}>
+        <BarberList
+          searchParams={searchParams}
+          barbers={barbers}
+          services={services}
+        />
+      </Suspense>
     </main>
   );
 }

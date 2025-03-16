@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useRouter, useSearchParams, usePathname } from "next/navigation";
 import Image from "next/image";
 import { ServiceResponse } from "@/types/services";
 
@@ -10,9 +10,15 @@ interface ServiceFilterProps {
 }
 
 const ServiceFilter = ({ services }: ServiceFilterProps) => {
-  const [selectedServices, setSelectedServices] = useState<string[]>([]);
   const router = useRouter();
   const searchParams = useSearchParams();
+  const pathname = usePathname();
+
+  const initialSelectedServices =
+    searchParams.get("services")?.split(",") || [];
+  const [selectedServices, setSelectedServices] = useState<string[]>(
+    initialSelectedServices
+  );
 
   const handleCheckboxChange = (slug: string) => {
     setSelectedServices((prevSelected) => {
@@ -24,20 +30,16 @@ const ServiceFilter = ({ services }: ServiceFilterProps) => {
   };
 
   useEffect(() => {
-    const servicesFromURL = searchParams.get("services");
-    if (servicesFromURL) {
-      setSelectedServices(servicesFromURL.split(","));
-    }
-  }, [searchParams]);
+    const params = new URLSearchParams(searchParams.toString());
 
-  useEffect(() => {
     if (selectedServices.length > 0) {
-      const query = selectedServices.join(",");
-      router.push(`/barbers?services=${query}`);
+      params.set("services", selectedServices.join(","));
     } else {
-      router.push(`/barbers`);
+      params.delete("services");
     }
-  }, [selectedServices, router]);
+
+    router.push(`${pathname}?${params.toString()}`, { scroll: false });
+  }, [selectedServices, router, pathname, searchParams]);
 
   return (
     <div className="space-y-4">
@@ -61,7 +63,7 @@ const ServiceFilter = ({ services }: ServiceFilterProps) => {
             />
             <label
               htmlFor={service.slug}
-              className={`flex items-center space-x-2 cursor-pointer p-2 border rounded-md  ${
+              className={`flex items-center space-x-2 cursor-pointer p-2 border rounded-md transition ${
                 selectedServices.includes(service.slug)
                   ? "bg-blue-200"
                   : "hover:bg-gray-100"

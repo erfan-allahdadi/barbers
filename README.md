@@ -1,3 +1,22 @@
+## 📊 Features Table
+
+| Feature                        | Implementation Status | Notes |
+|--------------------------------|-----------------------|-------|
+| **Filter based on name**        | ✔️ Implemented        |  |
+| **Filter based on Tab**              | ✔️ Implemented        | Apparently the given API is not responsive to this feature and if it were to be client-side handled, we would no longer have the advantage of server-side. |
+| **Filter based on services**     |  ✔️ Implemented    |  |
+| **App router - Typescript**      | ✔️ Implemented        |  |
+| **Use query params in URL**              | ✔️ Implemented        |  |
+| **Axios and AbortController**           | ❌ Not Implemented    | The Next document recommends using fetch to achieve things like caching - automatic optimization of requests on the server and client - better compatibility with different environments - support for streams in Next.js: - reducing the size of the project |
+| **Suspense and Loading**             | ✔️ Implemented        |  |
+| **Responsive design**              | ✔️ Implemented        |  |
+| **Tailwind CSS**                   | ✔️ Implemented        |  |
+| **TypeScript**                     | ✔️ Implemented        |  |
+| **ESLint**                         | ✔️ Implemented        |  |
+| **Prettier**                       | ✔️ Implemented        |  |
+
+
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
