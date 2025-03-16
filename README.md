@@ -1,3 +1,5 @@
+![Screenshot](./src/assets/demo.png)
+
 ## 📊 Features Table
 
 | Feature                        | Implementation Status | Notes |
