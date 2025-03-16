@@ -3,7 +3,7 @@
 | Feature                        | Implementation Status | Notes |
 |--------------------------------|-----------------------|-------|
 | **Filter based on name**        | ✔️ Implemented        |  |
-| **Filter based on Tab**              | ❌ Not Implemented (just UI)        | ظاهرا ای پی آی داده شده از این ویژگی پشتیبانی نمیکنه و اگر میخواستم کلاینتی هندل کنم مزیت سرور ساید بودن لیست و سئو رو از دست میدادم |
+| **Filter based on Tab**              | ❌ Not Implemented (just UI)        | ظاهرا ای پی آی داده شده از این ویژگی پشتیبانی نمیکنه و اگر میخواستم کلاینتی هندل کنم مزیت سرور ساید بودن لیست و سئو رو از دست میدادم، از همین جهت فعلا یک مقدار رو در یو آر ال ارسال میکنه و به سرور درخواستی زده نمیشه اما سایر فیلتر ها (جستجو و فیلتر بر اساس سرویس کار) کار میکنند
 | **Filter based on services**     |  ✔️ Implemented    |  |
 | **App router - Typescript**      | ✔️ Implemented        |  |
 | **Use query params in URL**              | ✔️ Implemented        |  |
